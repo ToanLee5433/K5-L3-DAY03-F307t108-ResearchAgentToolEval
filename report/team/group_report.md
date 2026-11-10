@@ -87,12 +87,14 @@ streamlit run app.py
 
 Dữ liệu được trích xuất trực tiếp từ `starter_v0/artifacts/version_log.csv` và các file `starter_v0/runs/*.json`. Tất cả các run đều bảo đảm điều kiện kỹ thuật: `provider_error_cases == 0` và `measured_cases == total_cases`.
 
-| Version | Changed Artifact | Hypothesis | Metric Before | Metric After | Run File |
-|---|---|---|---:|---:|---|
-| v0 | baseline | Đo hành vi chưa tối ưu của starter prompt và tools ban đầu (nhiều anti-patterns). | - | **0.65** (13/20) | [`runs/v0_B_base_gemini_20261110T174657225626.json`](../../starter_v0/runs/v0_B_base_gemini_20261110T174657225626.json) |
-| v1 | `system_prompt.md` | Loại bỏ việc ép đoán mò và ép 1 tool; thêm rule clarify khi thiếu thông tin và confirm trước khi gửi. | 0.65 | **0.75** (15/20) | [`runs/v1_B_base_gemini_20261110T175509273748.json`](../../starter_v0/runs/v1_B_base_gemini_20261110T175509273748.json) |
-| v2 | `tools.yaml` | Mô tả rõ when to use/when not to use; convention handle không có @; boundary xác nhận của send. | 0.75 | **0.80** (16/20) | [`runs/v2_B_base_gemini_20261110T175855639850.json`](../../starter_v0/runs/v2_B_base_gemini_20261110T175855639850.json) |
-| v3 | `system_prompt.md` | Trích xuất query súc tích tránh thừa từ khóa thời gian; đặt clarify response_type yes_no khi confirm; giữ timeframe turn trước. | 0.80 | **1.00** (20/20) | [`runs/v3_B_base_gemini_20261110T180152211060.json`](../../starter_v0/runs/v3_B_base_gemini_20261110T180152211060.json) |
+| Version | Author | Changed Artifact | Hypothesis | Metric Before | Metric After | Run File |
+|---|---|---|---|---:|---:|---|
+| v0 | ToanLee5433 | baseline | Đo hành vi chưa tối ưu của starter prompt và tools ban đầu (nhiều anti-patterns). | - | **0.65** (13/20) | [`runs/v0_B_base_gemini_20261110T174657225626.json`](../../starter_v0/runs/v0_B_base_gemini_20261110T174657225626.json) |
+| v1 | ToanLee5433 | `system_prompt.md` | Loại bỏ việc ép đoán mò và ép 1 tool; thêm rule clarify khi thiếu thông tin và confirm trước khi gửi. | 0.65 | **0.75** (15/20) | [`runs/v1_B_base_gemini_20261110T175509273748.json`](../../starter_v0/runs/v1_B_base_gemini_20261110T175509273748.json) |
+| v2 | itsbra1vo | `tools.yaml` | Mô tả rõ when to use/when not to use; convention handle không có @; boundary xác nhận của send. | 0.75 | **0.80** (16/20) | [`runs/v2_B_base_gemini_20261110T175855639850.json`](../../starter_v0/runs/v2_B_base_gemini_20261110T175855639850.json) |
+| v3 | ToanLee5433 | `system_prompt.md` | Trích xuất query súc tích tránh thừa từ khóa thời gian; đặt clarify response_type yes_no khi confirm; giữ timeframe turn trước. | 0.80 | **1.00** (20/20) | [`runs/v3_B_base_gemini_20261110T180152211060.json`](../../starter_v0/runs/v3_B_base_gemini_20261110T180152211060.json) |
+| v4 | ToanLee5433 | `tools.yaml` | Tích hợp công cụ mới `currency_exchange` và kiểm thử hồi quy (regression test) trên 20 base cases. | 1.00 | **1.00** (20/20) | [`runs/v3_B_base_gemini_20261110T183710237086.json`](../../starter_v0/runs/v3_B_base_gemini_20261110T183710237086.json) |
+| v3-group | itsbra1vo | `data/eval_group.json` | Đánh giá bộ 10 cases tự xây dựng của nhóm: kiểm thử routing tool mới, ranh giới an toàn và ngữ cảnh đa lượt. | 0.00 | **0.80** (8/10) | [`runs/v3_B_group_gemini_20261110T180802622241.json`](../../starter_v0/runs/v3_B_group_gemini_20261110T180802622241.json) |
 
 ### B2. Failure Analysis
 
