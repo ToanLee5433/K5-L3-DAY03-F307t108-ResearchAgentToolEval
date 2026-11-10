@@ -5,7 +5,7 @@
 - Tên nhóm: F307t108
 - Lớp: L3B
 - Repo nhóm: `K5-L3-DAY03-F307t108-ResearchAgentToolEval`
-- URL repo, nhánh nộp, commit chốt: https://github.com/ToanLee5433/K5-L3-DAY03-F307t108-ResearchAgentToolEval, nhánh `main`
+- URL repo, nhánh nộp, commit chốt: https://github.com/ToanLee5433/K5-L3-DAY03-F307t108-ResearchAgentToolEval, nhánh `2A202603941-LeQuyToan` (chuẩn bị merge vào `main`)
 
 ## Thành viên
 

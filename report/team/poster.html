@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Poster Phần A — Research Agent (Team F307t108)</title>
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-light: #3b82f6;
+      --accent: #10b981;
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    .poster-container {
+      max-width: 1000px;
+      width: 100%;
+      background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+    header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .title-group h1 {
+      font-size: 28px;
+      color: #60a5fa;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(59, 130, 246, 0.2);
+      color: #93c5fd;
+      border: 1px solid rgba(59, 130, 246, 0.4);
+    }
+    .meta-group {
+      text-align: right;
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .meta-group strong { color: var(--text); }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 768px) {
+      .grid-2 { grid-template-columns: 1fr; }
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+    }
+    .card h2 {
+      font-size: 18px;
+      color: #38bdf8;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin-top: 8px;
+    }
+    th, td {
+      padding: 8px 10px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th { color: #94a3b8; font-weight: 600; background: rgba(15, 23, 42, 0.5); }
+    tr:hover { background: rgba(51, 65, 85, 0.3); }
+    .tool-badge {
+      background: #0284c7;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    .new-badge {
+      background: #059669;
+      color: white;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+    .query-list {
+      list-style: none;
+      counter-reset: query-counter;
+    }
+    .query-list li {
+      counter-increment: query-counter;
+      margin-bottom: 10px;
+      padding: 10px 12px;
+      background: rgba(15, 23, 42, 0.6);
+      border-left: 3px solid #38bdf8;
+      border-radius: 4px;
+      font-size: 13.5px;
+    }
+    .query-list li::before {
+      content: counter(query-counter) ". ";
+      font-weight: bold;
+      color: #38bdf8;
+    }
+    .code-box {
+      background: #090d16;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+      color: #34d399;
+      margin-top: 6px;
+    }
+    .stats-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .stat-item {
+      flex: 1;
+      text-align: center;
+      background: rgba(15, 23, 42, 0.6);
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .stat-val { font-size: 20px; font-weight: bold; color: #10b981; }
+    .stat-lbl { font-size: 11px; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <div class="poster-container">
+    <header>
+      <div class="title-group">
+        <h1>🤖 AI Research Agent</h1>
+        <span class="badge">Team F307t108 — Lớp L3B</span>
+        <span class="badge" style="background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border-color: rgba(16, 185, 129, 0.4);">Base Eval: 100% (20/20 PASS)</span>
+      </div>
+      <div class="meta-group">
+        <div><strong>Trưởng nhóm:</strong> Lê Quý Toàn (2A202603941)</div>
+        <div><strong>Thành viên:</strong> Đàm Hồng Thái (2A202603927)</div>
+        <div><strong>Model:</strong> Google Gemini <code>gemini-3.5-flash-lite</code></div>
+      </div>
+    </header>
+
+    <div class="grid-2">
+      <!-- Section 1: Overview & Launch -->
+      <div class="card">
+        <h2>🚀 Khả năng của Agent</h2>
+        <p style="font-size: 13.5px; color: #cbd5e1; margin-bottom: 12px;">
+          Research Agent tự động hóa chu trình nghiên cứu đa nguồn: tra cứu tin tức thời sự trên web, trích xuất nội dung bài viết chuyên sâu từ URL, theo dõi timeline bài đăng thảo luận mạng xã hội X/Twitter, tính toán quy đổi ngoại tệ tức thời và kiểm soát an toàn trước khi gửi ra ngoại vi.
+        </p>
+        
+        <h3 style="font-size: 14px; color: #93c5fd; margin-top: 10px;">💻 Cách khởi chạy UI Web</h3>
+        <div class="code-box">
+          cd starter_v0<br>
+          streamlit run app.py
+        </div>
+        <p style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">
+          🌐 Local: <code>http://localhost:8501</code> | Cloudflare Tunnel: <code>cloudflared tunnel --url http://localhost:8501</code>
+        </p>
+
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-val">100%</div>
+            <div class="stat-lbl">v3 Base Accuracy</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">85/85</div>
+            <div class="stat-lbl">Pytest Unit Tests</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-val">0</div>
+            <div class="stat-lbl">Provider Error</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Sample Queries -->
+      <div class="card">
+        <h2>💡 Câu hỏi mẫu để thử nghiệm</h2>
+        <ul class="query-list">
+          <li><strong>Tin tức AI nổi bật nhất hôm nay</strong><br><span style="font-size: 12px; color: var(--text-muted);">→ Agent gọi lookup(query="AI") và format thành markdown digest.</span></li>
+          <li><strong>Xem các bài đăng gần nhất của tài khoản sama trên X</strong><br><span style="font-size: 12px; color: var(--text-muted);">→ Agent tự map tên tài khoản và gọi timeline(screenname="sama").</span></li>
+          <li><strong>Đổi 100 USD sang tiền Việt Nam (VND)</strong><br><span style="font-size: 12px; color: var(--text-muted);">→ Agent gọi tool mới currency_exchange tính ra 2.545.000 VND.</span></li>
+          <li><strong>Đăng bản tin công nghệ mới lên Telegram giúp tôi</strong><br><span style="font-size: 12px; color: var(--text-muted);">→ Kích hoạt guardrail an toàn: clarify(response_type="yes_no") xin phép.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Section 3: Tools Table -->
+    <div class="card">
+      <h2>🛠️ Danh mục công cụ (Tool Registry)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tên Tool</th>
+            <th>Chức năng & Nhiệm vụ</th>
+            <th>Loại Tool</th>
+            <th>Ranh giới / Guardrail</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="tool-badge">clarify</span></td>
+            <td>Hỏi lại người dùng khi thiếu tham số bắt buộc hoặc yêu cầu xác nhận hành động có rủi ro.</td>
+            <td>Control</td>
+            <td>Chặn suy đoán mò mẫm, yêu cầu yes_no trước hành động side-effect.</td>
+          </tr>
+          <tr>
+            <td><span class="tool-badge">lookup</span></td>
+            <td>Tra cứu tin tức và thông tin web thời sự theo từ khóa và timeframe (Tavily API).</td>
+            <td>Live API</td>
+            <td>Trích xuất query súc tích, lọc thời gian theo timeframe thay vì query expansion.</td>
+          </tr>
+          <tr>
+            <td><span class="tool-badge">social_search</span></td>
+            <td>Tìm kiếm các bài thảo luận, quan điểm dư luận mới nhất trên X/Twitter (RapidAPI).</td>
+            <td>Live API</td>
+            <td>Dùng cho chủ đề chung, phân biệt với tài khoản cá nhân cụ thể.</td>
+          </tr>
+          <tr>
+            <td><span class="tool-badge">timeline</span></td>
+            <td>Đọc dòng thời gian tweet của một tài khoản Twitter/X cụ thể theo handle (RapidAPI).</td>
+            <td>Live API</td>
+            <td>Bỏ ký tự '@' ở đầu handle, giới hạn số lượng bài đăng (limit).</td>
+          </tr>
+          <tr>
+            <td><span class="tool-badge">fetch</span></td>
+            <td>Cào và trích xuất nội dung văn bản đầy đủ từ một đường dẫn URL (Firecrawl API).</td>
+            <td>Live API</td>
+            <td>Bắt buộc có URL hợp lệ, cắt ngắn văn bản markdown chống tràn context.</td>
+          </tr>
+          <tr>
+            <td><span class="tool-badge">currency_exchange</span></td>
+            <td>Tra cứu tỷ giá và tính toán quy đổi ngoại tệ (USD, EUR, VND, JPY, GBP, AUD,...).</td>
+            <td><span class="new-badge">Tool mới</span></td>
+            <td>Kiểm tra mã tiền ISO 4217, bắt lỗi số tiền âm/lỗi kiểu dữ liệu, fallback offline.</td>
+          </tr>
+          <tr>
+            <td><span class="tool-badge">format</span></td>
+            <td>Định dạng các thông tin thô thu thập được thành bản tin markdown chuyên nghiệp.</td>
+            <td>Local Formatter</td>
+            <td>Giữ tối đa 5 items tiêu biểu kèm trích dẫn URL nguồn.</td>
+          </tr>
+          <tr>
+            <td><span class="tool-badge">send</span></td>
+            <td>Gửi bản tin tổng hợp lên kênh Telegram công cộng của nhóm.</td>
+            <td>Action</td>
+            <td>Bắt buộc có cờ <code>confirmed=True</code> từ người dùng mới được gửi.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
