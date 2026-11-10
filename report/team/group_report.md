@@ -8,9 +8,12 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
-- Thành viên và phân công: xem [TEAM.md](../../TEAM.md)
-- Provider/model dùng cho v0–v3:
+- Tên nhóm: F307t108 (Lớp L3B)
+- Trưởng nhóm: Lê Quý Toàn (2A202603941)
+- Thành viên: Đàm Hồng Thái (2A202603927)
+- Phân công chi tiết: xem [TEAM.md](../../TEAM.md)
+- Repository: [K5-L3-DAY03-F307t108-ResearchAgentToolEval](https://github.com/ToanLee5433/K5-L3-DAY03-F307t108-ResearchAgentToolEval)
+- Provider/model dùng cho v0–v3: Google Gemini (`gemini-2.5-flash`) qua GeminiProvider
 
 ## 2. Mục tiêu và cách tiếp cận — PHẦN A: Giới thiệu agent
 
