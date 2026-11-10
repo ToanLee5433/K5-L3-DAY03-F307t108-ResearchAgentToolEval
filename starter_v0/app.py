@@ -164,3 +164,4 @@ if user_input:
     })
     st.session_state["history"].append({"role": "user", "content": user_input})
     st.session_state["history"].append({"role": "assistant", "content": final_response})
+

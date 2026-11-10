@@ -59,3 +59,4 @@ def convert_currency(
         }
     except Exception as exc:
         return err("currency_exchange", exc)
+

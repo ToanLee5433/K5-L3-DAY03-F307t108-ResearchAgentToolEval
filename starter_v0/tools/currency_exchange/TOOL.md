@@ -12,3 +12,4 @@ side_effect: false
 
 Tra cứu tỷ giá hối đoái và quy đổi giá trị tiền tệ giữa các đồng tiền (USD, VND, EUR, JPY, GBP, CNY, SGD, KRW).
 Dùng khi người dùng hỏi tỷ giá, đổi tiền, hoặc tính toán ngân sách bằng ngoại tệ.
+
