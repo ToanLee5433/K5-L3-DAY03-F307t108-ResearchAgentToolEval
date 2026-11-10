@@ -5,6 +5,7 @@ Allows interactive chatting, live tool execution, guardrail confirmation, and pr
 from __future__ import annotations
 
 import json
+from datetime import datetime
 from pathlib import Path
 import streamlit as st
 
@@ -104,9 +105,11 @@ if user_input:
     with st.chat_message("user"):
         st.markdown(user_input)
 
-    # Run agent loop
+    # Run agent loop with real-time local date context
     history = st.session_state["history"]
-    working_messages = [{"role": "system", "content": system_prompt}] + history[-10:] + [{"role": "user", "content": user_input}]
+    today_str = datetime.now().strftime("%Y-%m-%d (múi giờ GMT+7, Việt Nam)")
+    current_system_prompt = f"{system_prompt}\n\n## Real-time Context\n- Current local date: {today_str}. When the user asks for 'hôm nay' or today's news/date, use this current local date."
+    working_messages = [{"role": "system", "content": current_system_prompt}] + history[-10:] + [{"role": "user", "content": user_input}]
     
     all_calls = []
     final_response = ""
