@@ -4,7 +4,7 @@
 
 - Họ tên: Đàm Hồng Thái
 - MSSV: 2A202603927
-- Email: damhongthai108@gmail.com
+- Email: thai.dh1012@gmail.com
 - Vai trò: Thành viên (Member)
 - Nhóm: F307t108 — Lớp L3B
 
