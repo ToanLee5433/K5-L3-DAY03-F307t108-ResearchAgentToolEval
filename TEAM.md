@@ -5,14 +5,14 @@
 - Tên nhóm: F307t108
 - Lớp: L3B
 - Repo nhóm: `K5-L3-DAY03-F307t108-ResearchAgentToolEval`
-- URL repo, nhánh nộp, commit chốt: https://github.com/ToanLee5433/K5-L3-DAY03-F307t108-ResearchAgentToolEval, nhánh `2A202603941-LeQuyToan` (chuẩn bị merge vào `main`)
+- URL repo, nhánh nộp, commit chốt: https://github.com/ToanLee5433/K5-L3-DAY03-F307t108-ResearchAgentToolEval, nhánh `main`
 
 ## Thành viên
 
 | STT | Họ tên | MSSV | Email | GitHub | Vai trò |
 | --: | ------ | ---- | ----- | ------ | ------- |
 |   1 | Lê Quý Toàn | 2A202603941 | lequytoanptit0303@gmail.com | ToanLee5433 | Trưởng nhóm (Leader) |
-|   2 | Đàm Hồng Thái | 2A202603927 | damhongthai108@gmail.com | itsbra1vo | Thành viên (Member) |
+|   2 | Đàm Hồng Thái | 2A202603927 | thai.dh1012@gmail.com | itsbra1vo | Thành viên (Member) |
 
 ## Cá nhân
 
